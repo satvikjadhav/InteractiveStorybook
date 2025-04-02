@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Namespace private var namespace
+    
     var body: some View {
         TabView {
             ForEach(storyPages, id: \.id) { page in
-                PageView(page: page)
+                PageView(page: page, namespace: namespace)
             }
         }
         .tabViewStyle(PageTabViewStyle())
