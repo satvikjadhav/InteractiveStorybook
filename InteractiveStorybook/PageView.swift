@@ -18,6 +18,7 @@ struct PageView: View {
     @GestureState private var scale: CGFloat = 1.0
     @GestureState private var rotation: Angle = .zero
     @State private var isJumping = false
+    @State private var flipAngle: Double = 0
     
     var body: some View {
         GeometryReader { geometry in
